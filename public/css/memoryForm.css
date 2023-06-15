@@ -1,0 +1,35 @@
+/* create styles */
+.inside-wrapper form{
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .inside-wrapper input,
+  .inside-wrapper textarea{
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+  }
+  textarea{
+    height: 120px;
+  }
+  .inside-wrapper button{
+    background: #2dc653;
+    color: white;
+    padding: 6px;
+    border: 0;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px 0;
+    position: relative;
+    left: 150;
+    width: 100px;
+  }
+  .h2{
+    text-align: center;
+    margin: 30px 0px 30px 0px
+  }
+  span{
+    color: #2dc653;
+  }

@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Memory</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/memoryForm.css">
+</head>
+<body>
+    <div class="wrapper">
+        <%- include("./partials/nav.ejs") %>
+        <div class="inside-wrapper">
+            <h2 class="h2">Add your <span>Memory</span></h2>
+            <form action="/memory/create" method="post">
+                <div class="memory-name-div">
+                    <p class="memory-name">Memory Name</p>
+                    <input type="text" name="name">
+                </div>
+                <div class="memory-content-div">
+                    <p class="memory-content">Memory</p>
+                    <textarea name="content" id="memory-content" cols="50" rows="10"></textarea>
+                </div>
+                <div class="memory-relive-div">
+                    <p class="memory-relive">Would you like to relive this moment</p>
+                    <input type="text" placeholder="Yes,No or Maybde" name="relive">
+                </div>
+                <div class="memory-rate-div">
+                    <p class="memory-rate">Rate</p>
+                    <input type="number" min="0" max="10" placeholder="From 1 to 10" name="rate">
+                </div>
+                <button class="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>

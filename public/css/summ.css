@@ -1,0 +1,46 @@
+.inside-wrapper{
+    max-width: 1100;
+    margin: 20px auto;
+    padding-top: 20px;
+}
+.head-flex{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.add{
+    text-align: center;
+    padding: 7px;
+    background-color: #2dc653;
+    border-radius: 5px;
+    width: 100px;
+}
+.single{
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+.top-flex{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.single-summ{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.see{
+    background: #2dc653;
+    color: white;
+    padding: 8px;
+    border: 0;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    width: fit-content;
+    margin: auto;
+  }
+  .name{
+    font-size: 22px;
+    margin-bottom: 15px;
+  }

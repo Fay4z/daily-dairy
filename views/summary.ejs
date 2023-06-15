@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/summ.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <%- include("./partials/nav.ejs") %>
+
+        <div class="inside-wrapper">
+            <div class="head-flex">
+                <ul>
+                    <h2>All Summaries</h2>
+                </ul>
+                <ul>
+                    <p class="add"><a href="/summary/create">Add</a></p>
+                </ul>
+            </div>
+            <div class="single-summ">
+                <% if(summaries.length >0){ %>
+                    <% summaries.forEach(summary => { %>
+                        <div class="single">
+                            <div class="top-flex">
+                                <p class="date"><%= summary.date %></p>
+                                <p class="rate">You Rated <%= summary.rate %></p>
+                            </div>  
+                            <p class="name"><%= summary.name %>......</p>
+
+                            <p class="see"><a href="/summaries/<%= summary._id %>">See full summary</a></p>
+                        </div>
+                    <% }) %>
+                <% }else{ %>
+                    <p>No summaries to show...... </p>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+    <%- include("./partials/footer.ejs") %>
+
+</body>
+</html>

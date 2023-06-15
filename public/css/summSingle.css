@@ -1,0 +1,39 @@
+.inside-wrapper{
+    max-width: 1100;
+    margin: 20px auto;
+    padding-top: 20px;
+}
+.single-summ{
+    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 9px;
+}
+.delete{
+    text-align: center;
+    padding: 7px;
+    background-color: #2dc653;
+    border-radius: 5px;
+    width: 100px;
+}
+.top-flex, .top-flex-work, .top-flex-end{
+    display: flex;
+    justify-content: space-between;
+}
+.mConsumed, .lConsumed, .emotion, .rate {
+    text-align: center;
+}
+.name{
+    text-align: center;
+    font-size: 26px;
+    margin: 20px 0;
+}
+h4{
+    padding: 0;
+    margin: 14px 0;
+}
+.content, .change{
+    line-height: 1.5;
+}
+.top-flex-work, .top-flex-end{
+    padding: 0 40px;
+}

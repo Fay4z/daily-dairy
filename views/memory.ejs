@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/summ.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <%- include("./partials/nav.ejs") %>
+
+        <div class="inside-wrapper">
+            <div class="head-flex">
+                <ul>
+                    <h2>All Memories</h2>
+                </ul>
+                <ul>
+                    <p class="add"><a href="/memory/create">Add</a></p>
+                </ul>
+            </div>
+            <div class="single-summ">
+                <% if(memories.length >0){ %>
+                    <% memories.forEach(memory => { %>
+                        <div class="single">
+                            <div class="top-flex">
+                                <p class="date"><%= memory.date %></p>
+                                <p class="rate">You Rated <%= memory.rate %></p>
+                            </div>  
+                            <p class="name"><%= memory.name %>......</p>
+
+                            <p class="see"><a href="/memories/<%= memory._id %>">See full Memory</a></p>
+                        </div>
+                    <% }) %>
+                <% }else{ %>
+                    <p>No memories to show...... </p>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+    <%- include("./partials/footer.ejs") %>
+
+</body>
+</html>

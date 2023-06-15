@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/memorySingle.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <%- include("./partials/nav.ejs") %>
+
+        <div class="inside-wrapper">
+            <div class="single-mem">
+                    <div class="top-flex">
+                        <p class="date"><%= memory.date %></p>
+                        <p class="delete"><a href="/memories/<%= memory._id %>">Delete</a></p>
+                    </div>  
+                    <h3 class="name"><%= memory.name %></h3>
+                    <p class="content"><%= memory.content %></p>
+                    <div class="top-flex-end">
+                        <div class="relive-div">
+                            <h4 class="relive-head">Would you like to relive this moment?</h4>
+                            <p class="relive"><%= memory.relive %></p>
+                        </div>
+                        <div class="rate-div">
+                            <h4 class="rate-head">You Rated</h4>
+                            <p class="rate"><%= memory.rate %>/10</p>
+                        </div>
+                    </div>  
+            </div>
+        </div>
+    </div>
+
+    <%- include("./partials/footer.ejs") %>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Summary</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/summaryForm.css">
+</head>
+<body>
+    <div class="wrapper">
+        <%- include("./partials/nav.ejs") %>
+        <div class="inside-wrapper">
+            <h2 class="h2">Add your <span>Daily Summary</span></h2>
+            <form action="/summary/create" method="post">
+                <div class="summ-name-div">
+                    <p class="summ-name">Describe your day by a name</p>
+                    <input type="text" placeholder="Eg: A Peaceful and relaxed day" name="name">
+                </div>
+                <div class="summ-content-div">
+                    <p class="summ-content">Summary</p>
+                    <textarea name="summ-content" id="summ-content" cols="50" rows="10" name="content"></textarea>
+                </div>
+                <div class="summ-emotion-div">
+                    <p class="summ-emotion">Emotion</p>
+                    <input type="text" id="summ-emotion" placeholder="Eg: Happy" name="emotion">
+                </div>
+                <div class="consumed">
+                    <div class="summ-mostConsumed-div">
+                        <p class="summ-mostConsumed">Most Consumed Work</p>
+                        <input type="text" id="summ-mostConsumed" name="mostConsumed">
+                    </div>
+                    <div class="summ-leastConsumed-div">
+                        <p class="summ-leastConsumed">Least Consumed Work</p>
+                        <input type="text" id="summ-leastConsumed" name="leastConsumed">
+                    </div>
+                </div>
+                <div class="summ-change-div">
+                    <p class="summ-change">What do you wish to change</p>
+                    <textarea name="change" id="summ-change" cols="30" rows="10"></textarea>
+                </div>
+                <div class="summ-rate-div">
+                    <p class="summ-rate">Rate</p>
+                    <input type="number" min="0" max="10" placeholder="From 1 to 10" id="summ-rate" name="rate">
+                </div>
+                <button class="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>

@@ -1,0 +1,26 @@
+.container{
+    padding: 6px;
+}
+.options{
+    max-width: 1000px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+.options h3{
+    padding: 20px 0px;
+    font-size: 1.4rem;
+}
+.options p{
+    padding-left: 26px;
+    font-size: 19px;
+    line-height: 1.5;
+}
+.options .add {
+    text-align: center;
+    padding: 7px;
+    background-color: #2dc653;
+    border-radius: 5px;
+    max-width: 100px;
+    margin: 20px auto;
+}

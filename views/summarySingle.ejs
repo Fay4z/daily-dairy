@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/summSingle.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <%- include("./partials/nav.ejs") %>
+
+        <div class="inside-wrapper">
+            <div class="single-summ">
+                    <div class="top-flex">
+                        <p class="date"><%= summary.date %></p>
+                        <p class="delete"><a href="/summaries/<%= summary._id %>">Delete</a></p>
+                    </div>  
+                    <h3 class="name"><%= summary.name %></h3>
+                    <p class="content"><%= summary.content %></p>
+                    <div class="top-flex-work">
+                        <div class="mConsumed-div">
+                            <h4 class="mConsumed-head">Most Consumed/Done Work</h4>
+                            <p class="mConsumed"><%= summary.mostConsumed %></p>
+                        </div>
+                        <div class="lConsumed-div">
+                            <h4 class="lConsumed-head">Least Consumed/Done Work</h4>
+                            <p class="lConsumed"><%= summary.leastConsumed %></p>
+                        </div>
+                    </div>  
+                    <h4 class="change-head">You wished to change</h4>
+                    <p class="change"><%= summary.change %></p>
+                    <div class="top-flex-end">
+                        <div class="emotion-div">
+                            <h4 class="emotion-div">Your Emotion</h4>
+                            <p class="emotion"><%= summary.emotion %></p>
+                        </div>
+                        <div class="rate-div">
+                            <h4 class="rate-head">You Rated</h4>
+                            <p class="rate"><%= summary.rate %>/10</p>
+                        </div>
+                    </div>  
+            </div>
+        </div>
+    </div>
+
+    <%- include("./partials/footer.ejs") %>
+
+</body>
+</html>
