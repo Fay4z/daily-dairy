@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <%- include("./partials/nav.ejs") %>
+        <%- include("../partials/nav.ejs") %>
 
         <div class="inside-wrapper">
             <div class="head-flex">
@@ -17,7 +17,7 @@
                     <h2>All Summaries</h2>
                 </ul>
                 <ul>
-                    <p class="add"><a href="/summary/create">Add</a></p>
+                    <p class="add"><a href="/summaries/create">Add</a></p>
                 </ul>
             </div>
             <div class="single-summ">
@@ -25,8 +25,8 @@
                     <% summaries.forEach(summary => { %>
                         <div class="single">
                             <div class="top-flex">
-                                <p class="date"><%= summary.date %></p>
-                                <p class="rate">You Rated <%= summary.rate %></p>
+                                <p class="date"><%= summary.createdAt.toLocaleDateString() %></p>
+                                <p class="rate">You Rated <%= summary.rate %>/10</p>
                             </div>  
                             <p class="name"><%= summary.name %>......</p>
 
@@ -40,7 +40,7 @@
         </div>
     </div>
 
-    <%- include("./partials/footer.ejs") %>
+    <%- include("../partials/footer.ejs") %>
 
 </body>
 </html>

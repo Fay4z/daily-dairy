@@ -37,3 +37,6 @@ h4{
 .top-flex-end{
     padding: 0 40px;
 }
+.del{
+    cursor: pointer;
+}

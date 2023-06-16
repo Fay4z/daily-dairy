@@ -8,17 +8,17 @@
 </head>
 <body>
     <div class="wrapper">
-        <%- include("./partials/nav.ejs") %>
+        <%- include("../partials/nav.ejs") %>
         <div class="inside-wrapper">
             <h2 class="h2">Add your <span>Daily Summary</span></h2>
-            <form action="/summary/create" method="post">
+            <form action="/summaries" method="post">
                 <div class="summ-name-div">
                     <p class="summ-name">Describe your day by a name</p>
                     <input type="text" placeholder="Eg: A Peaceful and relaxed day" name="name">
                 </div>
                 <div class="summ-content-div">
                     <p class="summ-content">Summary</p>
-                    <textarea name="summ-content" id="summ-content" cols="50" rows="10" name="content"></textarea>
+                    <textarea name="content" id="summ-content" cols="50" rows="10"></textarea>
                 </div>
                 <div class="summ-emotion-div">
                     <p class="summ-emotion">Emotion</p>
@@ -46,6 +46,6 @@
             </form>
         </div>
     </div>
-    <%- include("./partials/footer.ejs") %>
+    <%- include("../partials/footer.ejs") %>
 </body>
 </html>

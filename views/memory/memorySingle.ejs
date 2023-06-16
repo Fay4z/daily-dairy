@@ -9,13 +9,13 @@
 </head>
 <body>
     <div class="wrapper">
-        <%- include("./partials/nav.ejs") %>
+        <%- include("../partials/nav.ejs") %>
 
         <div class="inside-wrapper">
             <div class="single-mem">
                     <div class="top-flex">
-                        <p class="date"><%= memory.date %></p>
-                        <p class="delete"><a href="/memories/<%= memory._id %>">Delete</a></p>
+                        <p class="date"><%= memory.createdAt.toLocaleDateString() %></p>
+                        <p class="delete"><a data-doc="/memories/<%= memory._id %>" class="del">Delete</a></p>
                     </div>  
                     <h3 class="name"><%= memory.name %></h3>
                     <p class="content"><%= memory.content %></p>
@@ -33,7 +33,22 @@
         </div>
     </div>
 
-    <%- include("./partials/footer.ejs") %>
+    <%- include("../partials/footer.ejs") %>
+    <script>
+        const del = document.querySelector(".del");
+        console.log(del.dataset.doc)
+        
+        del.addEventListener("click", () => {
 
+            const endpoint = `${del.dataset.doc}`;
+
+            fetch(endpoint , {
+                method: "DELETE"
+            })
+            .then(response => response.json())
+            .then(data => window.location.href = data.redirect)
+            .catch(err => console.log(err))
+        })
+    </script>
 </body>
 </html>
